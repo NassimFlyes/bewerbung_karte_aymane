@@ -9,7 +9,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #dfe9f3, #ffffff);
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,80 +20,99 @@ body {
 .card {
     width: 370px;
     background: #fff;
-    border-radius: 28px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
     text-align: center;
     padding-bottom: 30px;
     position: relative;
     overflow: hidden;
 }
 
-/* TOP DESIGN BAR */
+/* TOP BAR */
 .card::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 120px;
-    background: linear-gradient(135deg, #4CAF50, #00c6ff);
+    height: 130px;
+    background: linear-gradient(135deg, #1976d2, #26c6da);
 }
 
-/* PROFILE IMAGE */
+/* ICON */
+.icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+}
+
+/* PROFILE */
 .card img.profile {
-    width: 170px;
-    height: 170px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
-    margin-top: 40px;
+    margin-top: 50px;
     object-fit: cover;
     border: 6px solid white;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    
     position: relative;
-    z-index: 2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    transition: 0.3s ease;
+}
+
+.card img.profile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+/* NAME */
+.card h2 {
+    margin: 15px 0 5px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #0d47a1;
 }
 
 /* TEXT */
-.card h2 {
-    margin: 15px 0 5px;
-    font-size: 23px;
-    font-weight: 600;
-}
-
 .card p {
-    color: #777;
+    color: #555;
     font-size: 14px;
     margin-bottom: 25px;
 }
 
-/* FILE BUTTONS */
+/* FILES */
 .files {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
     padding: 0 30px;
 }
 
 .files a {
     text-decoration: none;
     padding: 14px;
-    border-radius: 14px;
-    background: #f5f7fa;
-    color: #333;
+    border-radius: 12px;
+    background: #f1f8ff;
+    color: #0d47a1;
     font-size: 14px;
     font-weight: 500;
-    transition: all 0.3s ease;
-    border: 1px solid #e0e0e0;
+    transition: 0.3s;
+    border: 1px solid #bbdefb;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
 }
 
-/* HOVER */
 .files a:hover {
-    background: linear-gradient(135deg, #4CAF50, #00c6ff);
+    background: linear-gradient(135deg, #1976d2, #26c6da);
     color: white;
-    transform: translateY(-3px);
+    transform: translateY(-4px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
@@ -101,12 +120,9 @@ body {
 .footer {
     margin-top: 20px;
     font-size: 12px;
-    color: #aaa;
+    color: #888;
 }
-
 </style>
-</head>
-
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -114,21 +130,25 @@ body {
 
   gtag('config', 'G-BSZ6K8ZEQT');
 </script>
+</head>
 
 <body>
 
 <div class="card">
+    <div class="icon">🏥</div>
+
     <img src="./img.jpeg" alt="Profilbild" class="profile">
+    
     <h2>Aymane Kanjaa</h2>
-    <p> Bewerbung um eine Ausbildung als Pflegefachmann</p>
+    <p>🩺 Bewerbung um eine Ausbildung als Pflegefachmann</p>
 
     <div class="files">
-        <a href="lebenslauf.pdf" target="_blank">📄 Lebenslauf</a>
-        <a href="anschreiben.pdf" target="_blank">✉️ Anschreiben</a>
-        <a href="zeugnisse.pdf" target="_blank">📑 Zeugnisse</a>
+        <a href="https://drive.google.com/file/d/1dFlLIBBjf-f2lxJuT5EPBS19T8F8lkEI/view?usp=sharing" target="_blank">📄 Lebenslauf</a>
+        <a href="https://drive.google.com/file/d/1hwuDaa_zgdwmRwuxe6_t2WH-itmQqXB8/view?usp=sharing" target="_blank">✉️ Anschreiben</a>
+        <a href="https://drive.google.com/file/d/1cKGWzHgJCBaQ1k8zPfuVY2zuOAgf_WKh/view?usp=sharing" target="_blank">📑 Zeugnisse</a>
     </div>
 
-    <div class="footer">kanjaa.ayman5@gmail.com ||  © 2026</div>
+    <div class="footer">📧 kanjaa.ayman5@gmail.com | © 2026</div>
 </div>
 
 </body>
